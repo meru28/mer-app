@@ -1,0 +1,48 @@
+@mixin w-h($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin transformMX($transf) {
+  -webkit-transform: $transf;
+  -ms-transform: $transf;
+  transform: $transf;
+}
+@mixin transitionMX($transf) {
+  -webkit-transition: $transf;
+  -o-transition: $transf;
+  transition: $transf;
+}
+@mixin boxshadowMX($boxf) {
+  -moz-box-shadow: $boxf;
+  -webkit-box-shadow: $boxf;
+  box-shadow: $boxf;
+}
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+@mixin max-md {
+  @media (max-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}

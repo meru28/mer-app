@@ -1,0 +1,59 @@
+@import "../base/main-base";
+.button {
+  &-primary1 {
+    font-family: "Ubuntu", sans-serif !important;
+    color: white;
+    background: $primary-color;
+    font-size: $small-font;
+    min-width: 70px;
+    &:hover {
+      color: white;
+    }
+  }
+  &-carousel {
+    color: rgba(49, 69, 153, 0.6);
+    outline: none !important;
+    @include boxshadowMX(none !important);
+    &:active {
+      color: $primary-color;
+    }
+    &:focus {
+      color: $primary-color;
+    }
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  &-toggler {
+    @include w-h(30px, 5px);
+    background-color: $primary-color;
+    border-radius: 3px;
+    display: block;
+    margin: 7px 0;
+    transition: all 0.4s cubic-bezier(0.61, 0.59, 0.26, 0.93);
+  }
+}
+.input {
+  &-info {
+    width: 100%;
+    color: $primary-color;
+    border-radius: 4px;
+    padding: 5px 10px 5px 10px;
+    outline: none;
+    font-size: 10px;
+    box-shadow: none;
+    border: 1px solid $placeholder-color;
+    min-height: 40px;
+    &::placeholder {
+      color: $placeholder-color;
+    }
+    &:focus {
+      box-shadow: 0 0 2pt $primary-color;
+    }
+    &:focus ~ .icon-form {
+      color: $primary-color;
+      @include transitionMX(all 0.2s);
+      transition-delay: 0.1s;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+@import "../base/main-base";
+@import "../helper/keyframe";
+
+.navbar-toggler {
+  padding: 0;
+  outline: none !important;
+  border: none !important;
+}
+
+.dropdown-menu {
+  border: none !important;
+}
+
+@media (min-width: 900px) {
+  .dropdown-menu {
+    display: block !important;
+    visibility: hidden;
+    opacity: 0.6;
+
+    @include boxshadowMX(0 0.5rem 1rem rgba(0, 0, 0, 0.15));
+
+    @include transformMX(translateY(30px));
+
+    @include transitionMX(all 0.2s);
+
+    border: none !important;
+  }
+
+  .dropdown-item {
+    color: $primary-color !important;
+
+    &:hover {
+      @include transitionMX(all 0.1s linear);
+
+      font-weight: bold;
+    }
+
+    &:active {
+      background: transparent;
+      font-weight: bold;
+    }
+  }
+
+  .dropdown:hover .dropdown-menu {
+    @include transformMX(translateY(0px));
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.carousel-indicators li {
+  box-sizing: content-box;
+
+  margin: 7px;
+
+  border-radius: 50% !important;
+
+  border: solid 1.2px white;
+  background: transparent;
+  @include w-h(6px, 6px);
+  @include boxshadowMX(0 0.5rem 1rem rgba(0, 0, 0, 0.15));
+}
+
+.carousel-indicators li.active {
+  background: white;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-toggle::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  content: "\f078" !important;
+  position: absolute;
+  right: -15px;
+}
+
+.table td,
+.table th {
+  border-top: none !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: $primary-color !important;
+}
+
+// TABS//
+
+.nav-tabs .nav-link.active {
+  color: $primary-color !important;
+  font-weight: bold;
+  position: relative;
+  height: 70px;
+  &::after {
+    content: "";
+    @include w-h(100%, 5px);
+    background: $secondary-color;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+
+    animation: tabs-width 0.2s linear;
+  }
+}
+
+.nav-tabs .nav-link {
+  color: $placeholder-color !important;
+  border: none !important;
+  border-top-left-radius: none !important;
+  border-top-right-radius: none !important;
+  padding-bottom: 1.5rem !important;
+  font-size: 14px;
+}
+
+.dropdown-item {
+  color: $primary-color !important;
+}
+
+
+
+

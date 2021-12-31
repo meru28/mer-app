@@ -1,0 +1,32 @@
+@import "../base/main-base";
+
+.icon {
+  &-info {
+    color: $secondary-color;
+
+    @include w-h(80px, 80px);
+    font-size: 24px;
+    border-radius: 50%;
+    border: solid 2px $secondary-color;
+  }
+
+  &-contact {
+    background: $primary-color;
+    color: white;
+
+    font-size: 20px;
+  }
+
+
+  &-form{
+    position: absolute;
+    right: 26px;
+    top: 12px;
+    color: $placeholder-color;
+    transition: .2s;
+
+    @include md {
+    font-size: 10px;
+    }
+  }
+}

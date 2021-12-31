@@ -1,0 +1,13 @@
+@import "../scss/layout/main-layout";
+@import "../scss/component/main-component";
+@import "../scss/helper/helper";
+@import "../scss/base/main-base";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  color: $primary-color;
+}

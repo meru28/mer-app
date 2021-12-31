@@ -1,0 +1,69 @@
+@import "../base/main-base";
+
+#galery {
+  @include max-md {
+    max-width: 100vw;
+    overflow: hidden;
+  }
+  @include md {
+    min-height: 400px;
+  }
+}
+
+#info {
+  min-height: 100px;
+
+  @include md {
+    min-height: 500px;
+  }
+}
+
+#sejarah {
+  min-height: 100px;
+  @include md {
+    min-height: 400px;
+  }
+}
+
+
+#slide-galery {
+  min-height: 100px;
+  max-width: 100vw;
+  overflow: hidden;
+  @include md {
+    min-height: 500px;
+  }
+}
+
+#footer {
+  min-height: 100px;
+
+  @include md {
+    min-height: 500px;
+  }
+}
+
+
+#layanan{
+  @include md {
+  min-height: 400px;
+  }
+}
+
+
+
+
+#info-bank{
+  @include md {
+    margin-bottom: 150px;
+  }
+}
+
+
+
+#misi{
+  @include md{
+    padding-top: 100px;
+    margin-top: -140px;
+  }
+}
